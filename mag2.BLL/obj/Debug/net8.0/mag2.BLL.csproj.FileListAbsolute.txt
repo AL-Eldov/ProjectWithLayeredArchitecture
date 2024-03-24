@@ -1,0 +1,15 @@
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\bin\Debug\net8.0\mag2.BLL.deps.json
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\bin\Debug\net8.0\mag2.BLL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\bin\Debug\net8.0\mag2.BLL.pdb
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\bin\Debug\net8.0\mag2.DAL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\bin\Debug\net8.0\mag2.DAL.pdb
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.csproj.AssemblyReference.cache
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.AssemblyInfoInputs.cache
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.AssemblyInfo.cs
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.csproj.CoreCompileInputs.cache
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.csproj.Up2Date
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\refint\mag2.BLL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\mag2.BLL.pdb
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.BLL\obj\Debug\net8.0\ref\mag2.BLL.dll

@@ -1,0 +1,51 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = mag2.WEB
+build_property.RootNamespace = mag2.WEB
+build_property.ProjectDir = D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.WEB\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.WEB
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Home/EditfPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0ZlBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Home/GetfPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRmUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Home/GetNPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXROUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Home/GetZeroPercentPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRaZXJvUGVyY2VudFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Home/ShowPicturePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93UGljdHVyZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Home/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningPath/University/2023-2024учеба/1М курс/2 семестр/Современные компьютерные технологии/mag2/mag2.WEB/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

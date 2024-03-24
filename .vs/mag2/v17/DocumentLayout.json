@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LearningPath\\University\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u041C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBA41EC3-9EB7-4A70-BE4F-B50B45BB8E26}|mag2.WEB\\mag2.WEB.csproj|d:\\learningpath\\university\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u043C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\mag2.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBA41EC3-9EB7-4A70-BE4F-B50B45BB8E26}|mag2.WEB\\mag2.WEB.csproj|solutionrelative:mag2.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBA41EC3-9EB7-4A70-BE4F-B50B45BB8E26}|mag2.WEB\\mag2.WEB.csproj|d:\\learningpath\\university\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u043C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\mag2.web\\views\\home\\getzeropercentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DBA41EC3-9EB7-4A70-BE4F-B50B45BB8E26}|mag2.WEB\\mag2.WEB.csproj|solutionrelative:mag2.web\\views\\home\\getzeropercentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetZeroPercentPage.cshtml",
+              "DocumentMoniker": "D:\\LearningPath\\University\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u041C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\mag2.WEB\\Views\\Home\\GetZeroPercentPage.cshtml",
+              "RelativeDocumentMoniker": "mag2.WEB\\Views\\Home\\GetZeroPercentPage.cshtml",
+              "ToolTip": "D:\\LearningPath\\University\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u041C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\mag2.WEB\\Views\\Home\\GetZeroPercentPage.cshtml",
+              "RelativeToolTip": "mag2.WEB\\Views\\Home\\GetZeroPercentPage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-24T16:36:38.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\LearningPath\\University\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u041C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\mag2.WEB\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "mag2.WEB\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\LearningPath\\University\\2023-2024\u0443\u0447\u0435\u0431\u0430\\1\u041C \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0421\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\\mag2\\mag2.WEB\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "mag2.WEB\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAwJUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T19:39:56.54Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\mag2.WEB.csproj": {}
+  },
+  "projects": {
+    "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.BLL\\mag2.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.BLL\\mag2.BLL.csproj",
+        "projectName": "mag2.BLL",
+        "projectPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.BLL\\mag2.BLL.csproj",
+        "packagesPath": "C:\\Users\\AL_Eldnov\\.nuget\\packages\\",
+        "outputPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AL_Eldnov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj": {
+                "projectPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[5.0.22, )"
+            },
+            "System.Dynamic.Runtime": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj",
+        "projectName": "mag2.DAL",
+        "projectPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj",
+        "packagesPath": "C:\\Users\\AL_Eldnov\\.nuget\\packages\\",
+        "outputPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AL_Eldnov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\mag2.WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\mag2.WEB.csproj",
+        "projectName": "mag2.WEB",
+        "projectPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\mag2.WEB.csproj",
+        "packagesPath": "C:\\Users\\AL_Eldnov\\.nuget\\packages\\",
+        "outputPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AL_Eldnov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.BLL\\mag2.BLL.csproj": {
+                "projectPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.BLL\\mag2.BLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[5.0.22, )"
+            },
+            "System.Dynamic.Runtime": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<mag2.WEB.Models.Vector_c_ViewModel>
+
+
+<h2>3) Задать вектор процент обнуления для вектора с</h2>
+
+<form asp-action="ShowPicturePage" asp-controller="home">
+
+    <p>
+        <label>%: </label>
+        <input type="text" step="0.01" name="percent" />
+    </p>
+    <p>
+        <input type="submit" value="Подтвердить" />
+    </p>
+</form>
+
+<h2>Изначальный вектор f на плоскости</h2>
+
+<img src="~/Picture/StartVector_f.png" class="img" alt="Image Error" Width="1200" Height="900" />
+
+<h2>Посчитанный ветктор с </h2>
+
+<style>
+    table {
+        width: 22%; /* Ширина таблицы */
+        border-spacing: 2px; /* Расстояние между ячейками */
+        margin: auto; /* Выравниваем таблицу по центру окна  */
+    }
+
+    td {
+        text-align: center; /* Выравниваем текст по центру ячейки */
+    }
+</style>
+
+<table class="table">
+    <tr><th></th><th></th><th></th><th></th><th></th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id)</td>
+            <td>@item.RealPart</td>
+            <td>+ i *</td>
+            <td>@item.ImaginaryPart</td>
+        </tr>
+    }
+</table>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.10/jquery.validate.unobtrusive.min.js"></script>

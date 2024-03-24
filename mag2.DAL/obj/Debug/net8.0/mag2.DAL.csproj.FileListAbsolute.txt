@@ -1,0 +1,12 @@
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\bin\Debug\net8.0\mag2.DAL.deps.json
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\bin\Debug\net8.0\mag2.DAL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\bin\Debug\net8.0\mag2.DAL.pdb
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.csproj.AssemblyReference.cache
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.AssemblyInfoInputs.cache
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.AssemblyInfo.cs
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.csproj.CoreCompileInputs.cache
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\refint\mag2.DAL.dll
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\mag2.DAL.pdb
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.DAL\obj\Debug\net8.0\ref\mag2.DAL.dll

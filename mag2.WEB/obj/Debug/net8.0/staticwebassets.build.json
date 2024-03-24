@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "Pr6K+TgtTLYWZFcUniLSDKDE9Fu7mkN/wzPgWpKiJHg=",
+  "Source": "mag2.WEB",
+  "BasePath": "_content/mag2.WEB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "mag2.WEB\\wwwroot",
+      "Source": "mag2.WEB",
+      "ContentRoot": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\",
+      "BasePath": "_content/mag2.WEB",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\BothVector_f.png",
+      "SourceId": "mag2.WEB",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\",
+      "BasePath": "_content/mag2.WEB",
+      "RelativePath": "Picture/BothVector_f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Picture\\BothVector_f.png"
+    },
+    {
+      "Identity": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\StartVector_f.png",
+      "SourceId": "mag2.WEB",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\",
+      "BasePath": "_content/mag2.WEB",
+      "RelativePath": "Picture/StartVector_f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Picture\\StartVector_f.png"
+    }
+  ]
+}

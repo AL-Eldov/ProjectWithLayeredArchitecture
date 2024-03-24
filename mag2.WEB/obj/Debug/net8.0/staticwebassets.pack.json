@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\BothVector_f.png",
+      "PackagePath": "staticwebassets\\Picture\\BothVector_f.png"
+    },
+    {
+      "Id": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\StartVector_f.png",
+      "PackagePath": "staticwebassets\\Picture\\StartVector_f.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.mag2.WEB.props",
+      "PackagePath": "build\\mag2.WEB.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.mag2.WEB.props",
+      "PackagePath": "buildMultiTargeting\\mag2.WEB.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.mag2.WEB.props",
+      "PackagePath": "buildTransitive\\mag2.WEB.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.mag2.WEB.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
