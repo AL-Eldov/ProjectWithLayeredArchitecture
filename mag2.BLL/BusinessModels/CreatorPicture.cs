@@ -30,15 +30,12 @@ public static class CreatorPicture
                 return $"-{-position}";
         }
         // create a custom tick generator using your custom label formatter
-        ScottPlot.TickGenerators.NumericAutomatic myTickGenerator = new()
-        {
-            LabelFormatter = CustomFormatter
-        };
+        ScottPlot.TickGenerators.NumericAutomatic myTickGenerator = new() { LabelFormatter = CustomFormatter };
         // tell an axis to use the custom tick generator
         plt.Axes.Bottom.TickGenerator = myTickGenerator;
         plt.SavePng("D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\StartVector_f.png", 1200, 900);
     }
-    public static void GetBothPicture(List<double> x1, List<double> y1, List<double> x2, List<double> y2)
+    public static void GetBothPicture(List<double> x1, List<double> y1, List<double> x2, List<double> y2, bool toggle = true)
     {
         //ScottPlot.Version.ShouldBe(4, 1, 71);
         var plt = new ScottPlot.Plot();
@@ -65,13 +62,18 @@ public static class CreatorPicture
             else
                 return $"-{-position}";
         }
-        // create a custom tick generator using your custom label formatter
-        ScottPlot.TickGenerators.NumericAutomatic myTickGenerator = new()
+        if (toggle)
         {
-            LabelFormatter = CustomFormatter
-        };
-        // tell an axis to use the custom tick generator
-        plt.Axes.Bottom.TickGenerator = myTickGenerator;
+            // create a custom tick generator using your custom label formatter
+            ScottPlot.TickGenerators.NumericAutomatic myTickGenerator = new() { LabelFormatter = CustomFormatter };
+            // tell an axis to use the custom tick generator
+            plt.Axes.Bottom.TickGenerator = myTickGenerator;
+        }
+        else
+        {
+            plt.Axes.SetLimitsY(-10, 10);
+
+        }
         plt.SavePng("D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\BothVector_f.png", 1200, 900);
     }
 }

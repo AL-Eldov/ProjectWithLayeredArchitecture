@@ -48,3 +48,4 @@ D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\С�
 D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.WEB\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
 D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.WEB\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
 D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.WEB\bin\Debug\net8.0\mag2.WEB.staticwebassets.runtime.json
+D:\LearningPath\University\2023-2024учеба\1М курс\2 семестр\Современные компьютерные технологии\mag2\mag2.WEB\obj\Debug\net8.0\mag2.WEB.sourcelink.json

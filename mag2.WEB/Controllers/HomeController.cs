@@ -28,19 +28,19 @@ public class HomeController : Controller
         Matrix_A_DTO tempMatrix_A_DTO;
         for (int i = 0; i < N + 1;)
         {
-            for (int j = 0; j < N; j++)//N+1
+            for (int j = 0; j < N; j++)
             {
-                for (int k = 0; k < N; k++, i++)//N+1
+                for (int k = 0; k < N; k++, i++)
                 {
                     tempMatrix_A_DTO = new Matrix_A_DTO { Id = i, Row = j + 1, Column = k + 1, RealPart = MatrixA[i].Real, ImaginaryPart = MatrixA[i].Imaginary };
                     taskService.Matrix_A_DTO_Values.CreateWithoutSave(tempMatrix_A_DTO);
                 }
             }
         }
-        RandomVector_f randomVectorF = new RandomVector_f(N);//N+1
+        RandomVector_f randomVectorF = new RandomVector_f(N, false);//, false
         Complex[] Vector_f = randomVectorF.Vector_f.ToArray();
         Vector_f_DTO tempvector_f_DTO;
-        for (int i = 0; i < N; i++)//N+1
+        for (int i = 0; i < N; i++)
         {
             tempvector_f_DTO = new Vector_f_DTO { Id = i, RealPart = Vector_f[i].Real, ImaginaryPart = Vector_f[i].Imaginary };
             taskService.Vector_f_DTO_Values.CreateWithoutSave(tempvector_f_DTO);
@@ -151,7 +151,7 @@ public class HomeController : Controller
         IEnumerable<Vector_f_DTO> tempVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         IEnumerable<Vector_f_new_DTO> tempVector_f_new_DTO = taskService.Vector_f_new_DTO_Values.GetAll();
         CreatorPicture.GetBothPicture(tempVector_f_DTO.Select(x => x.RealPart).ToList(), tempVector_f_DTO.Select(x => x.ImaginaryPart).ToList(),
-            tempVector_f_new_DTO.Select(x => x.RealPart).ToList(), tempVector_f_new_DTO.Select(x => x.ImaginaryPart).ToList());
+            tempVector_f_new_DTO.Select(x => x.RealPart).ToList(), tempVector_f_new_DTO.Select(x => x.ImaginaryPart).ToList());//, false
 
         return View();
     }
