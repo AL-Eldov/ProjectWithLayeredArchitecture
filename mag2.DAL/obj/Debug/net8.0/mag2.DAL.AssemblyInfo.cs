@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mag2.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80a974a4ccbd8ab9a85e05b525c533ca2e554e57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7544b230abefedfb99034989cfda9af79a8731a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("mag2.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mag2.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

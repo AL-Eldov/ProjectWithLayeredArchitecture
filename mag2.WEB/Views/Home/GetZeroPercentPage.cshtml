@@ -10,9 +10,15 @@
         <input type="text" step="0.01" name="percent" />
     </p>
     <p>
+        <label>Показать вещественную картинку </label>
+        @Html.CheckBox("switcher", @ViewData["Switcher"])
+    </p>
+    <p>
         <input type="submit" value="Подтвердить" />
     </p>
 </form>
+
+
 
 <h2>Изначальный вектор f на плоскости</h2>
 
@@ -22,7 +28,7 @@
 
 <style>
     table {
-        width: 23%; /* Ширина таблицы */
+        width: 24%; /* Ширина таблицы */
         border-spacing: 2px; /* Расстояние между ячейками */
         margin: auto; /* Выравниваем таблицу по центру окна  */
     }

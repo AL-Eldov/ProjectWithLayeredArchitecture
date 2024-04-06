@@ -21,12 +21,12 @@ public class HomeController : Controller
         taskService.DeleteAll();
         return View();
     }
-    public IActionResult GetfPage(int N)
+    public IActionResult GetfPage(int N, bool switcher)
     {
         CounterMatrixA counterMatrixA = new CounterMatrixA(N);
         Complex[] MatrixA = counterMatrixA.MatrixA.ToArray();
         Matrix_A_DTO tempMatrix_A_DTO;
-        for (int i = 0; i < N + 1;)
+        for (int i = 0; i < N;)
         {
             for (int j = 0; j < N; j++)
             {
@@ -37,8 +37,9 @@ public class HomeController : Controller
                 }
             }
         }
-        RandomVector_f randomVectorF = new RandomVector_f(N, false);//, false
+        RandomVector_f randomVectorF = new RandomVector_f(N, !switcher);
         Complex[] Vector_f = randomVectorF.Vector_f.ToArray();
+        ViewData["Switcher"] = !switcher;
         Vector_f_DTO tempvector_f_DTO;
         for (int i = 0; i < N; i++)
         {
@@ -92,13 +93,14 @@ public class HomeController : Controller
         var viewVector_f = mapper.Map<IEnumerable<Vector_f_DTO>, List<Vector_f_ViewModel>>(convertVector_f_DTO);
         return View("GetfPage", viewVector_f);
     }
-    public IActionResult GetZeroPercentPage()
+    public IActionResult GetZeroPercentPage(bool switcher)
     {
         IEnumerable<Vector_f_DTO> vector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         IEnumerable<Matrix_A_DTO> matrix_A_DTO = taskService.Matrix_A_DTO_Values.GetAll();
         Complex[][] A = ComplexConverter.ConvertToMatrix(matrix_A_DTO, (int)Math.Sqrt(matrix_A_DTO.Count()));
         Complex[] f = ComplexConverter.ConvertToVector_f(vector_f_DTO);
-        Complex[] solution = SistemOfEquationsSolver.SystemSolve(A, f);
+        //Complex[] solution = SistemOfEquationsSolver.SystemSolve(A, f);
+        Complex[] solution = InverseDiscreteFourierTransform.SystemSolve(A, f);
         for (int i = 0; i < solution.Length; i++)
         {
             taskService.Vector_c_DTO_Values.CreateWithoutSave(new Vector_c_DTO { Id = i + 1, RealPart = solution[i].Real, ImaginaryPart = solution[i].Imaginary });
@@ -108,15 +110,24 @@ public class HomeController : Controller
         IEnumerable<Vector_f_DTO> convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_f_DTO, Vector_f_ViewModel>()).CreateMapper();
         var viewVector_f = mapper.Map<IEnumerable<Vector_f_DTO>, List<Vector_f_ViewModel>>(convertVector_f_DTO);
-        CreatorPicture.GetSinglPicture(viewVector_f.Select(x => x.RealPart).ToList(), viewVector_f.Select(x => x.ImaginaryPart).ToList());
-
+        if (!switcher)
+        {
+            CreatorPicture.GetSinglPicture(viewVector_f.Select(x => x.RealPart).ToList(), viewVector_f.Select(x => x.ImaginaryPart).ToList());
+        }
+        else
+        {
+            RandomVector_f randomVectorF = new RandomVector_f(viewVector_f.Count(), !switcher);
+            List<double> Vector_x = randomVectorF.Vector_X_k!.ToList();
+            CreatorPicture.GetSinglPicture(Vector_x, viewVector_f.Select(x => x.RealPart).ToList(), "Равномерно распределенный набор иксов", "Значения вектора f");
+        }
+        ViewData["Switcher"] = switcher;
         IEnumerable<Vector_c_DTO> convertVector_c_DTO = taskService.Vector_c_DTO_Values.GetAll();
         mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_c_DTO, Vector_c_ViewModel>()).CreateMapper();
         var viewVector_c = mapper.Map<IEnumerable<Vector_c_DTO>, List<Vector_c_ViewModel>>(convertVector_c_DTO);
 
         return View(viewVector_c);
     }
-    public IActionResult ShowPicturePage(string percent)
+    public IActionResult ShowPicturePage(string percent, bool switcher)
     {
         taskService.Vector_f_new_DTO_Values.DeleteAll();
         taskService.Vector_c_new_DTO_Values.DeleteAll();
@@ -124,14 +135,14 @@ public class HomeController : Controller
 
         Vector_c_DTO[] convertVector_c_DTO = taskService.Vector_c_DTO_Values.GetAll().OrderBy(x => x.GetAbsolute()).ToArray();
         int N = (int)Math.Round(convertVector_c_DTO.Length / 100.0 * double.Parse(percent));
-        for (int i = 0; i < N; i++)//Id= convertVector_c_DTO[i].Id,
+        for (int i = 0; i < N; i++)
         {
-            Vector_c_new_DTO? vector_c_new_DTO = new Vector_c_new_DTO { RealPart = 0, ImaginaryPart = 0 };
+            Vector_c_new_DTO? vector_c_new_DTO = new Vector_c_new_DTO { Id = convertVector_c_DTO[i].Id, RealPart = 0, ImaginaryPart = 0 };
             taskService.Vector_c_new_DTO_Values.CreateWithoutSave(vector_c_new_DTO);
         }
         for (int i = N; i < convertVector_c_DTO.Length; i++)
         {
-            Vector_c_new_DTO? vector_c_new_DTO = new Vector_c_new_DTO { RealPart = convertVector_c_DTO[i].RealPart, ImaginaryPart = convertVector_c_DTO[i].ImaginaryPart };
+            Vector_c_new_DTO? vector_c_new_DTO = new Vector_c_new_DTO { Id = convertVector_c_DTO[i].Id, RealPart = convertVector_c_DTO[i].RealPart, ImaginaryPart = convertVector_c_DTO[i].ImaginaryPart };
             taskService.Vector_c_new_DTO_Values.CreateWithoutSave(vector_c_new_DTO);
         }
         taskService.Save();
@@ -150,10 +161,23 @@ public class HomeController : Controller
 
         IEnumerable<Vector_f_DTO> tempVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         IEnumerable<Vector_f_new_DTO> tempVector_f_new_DTO = taskService.Vector_f_new_DTO_Values.GetAll();
-        CreatorPicture.GetBothPicture(tempVector_f_DTO.Select(x => x.RealPart).ToList(), tempVector_f_DTO.Select(x => x.ImaginaryPart).ToList(),
-            tempVector_f_new_DTO.Select(x => x.RealPart).ToList(), tempVector_f_new_DTO.Select(x => x.ImaginaryPart).ToList());//, false
+
+
+        if (!switcher)
+        {
+            CreatorPicture.GetBothPicture(tempVector_f_DTO.Select(x => x.RealPart).ToList(), tempVector_f_DTO.Select(x => x.ImaginaryPart).ToList(),
+            tempVector_f_new_DTO.Select(x => x.RealPart).ToList(), tempVector_f_new_DTO.Select(x => x.ImaginaryPart).ToList());
+        }
+        else
+        {
+            RandomVector_f randomVectorF = new RandomVector_f(tempVector_f_DTO.Count(), !switcher);
+            List<double> Vector_x = randomVectorF.Vector_X_k!.ToList();
+            CreatorPicture.GetBothPicture(Vector_x, tempVector_f_DTO.Select(x => x.RealPart).ToList(),
+            Vector_x, tempVector_f_new_DTO.Select(x => x.RealPart).ToList(), "Равномерно распределенный набор иксов", "Значения вектора f");
+        }
+        ViewData["Switcher"] = switcher;
+
 
         return View();
     }
 }
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaa

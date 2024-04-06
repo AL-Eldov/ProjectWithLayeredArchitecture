@@ -18,12 +18,12 @@ public class CounterMatrixA
         List<Complex> matrixElements = new List<Complex>();
         double realPart = 0;
         double imagPart = 0;
-        for (int j = 1; j < N + 1; j++)//j = 0
+        for (int j = 0; j < N; j++)
         {
-            for (int k = 1; k < N + 1; k++) //k = 0
+            for (int k = 0; k < N; k++) 
             {
-                realPart = Math.Sin(2 * Math.PI * j * k / N);
-                imagPart = Math.Cos(2 * Math.PI * j * k / N);
+                realPart = Math.Cos(2 * Math.PI * j * k / N);
+                imagPart = Math.Sin(2 * Math.PI * j * k / N);
                 matrixElements.Add(new Complex(realPart, imagPart));
             }
         }

@@ -4,7 +4,7 @@ namespace mag2.BLL.BusinessModels;
 
 public static class CreatorPicture
 {
-    public static void GetSinglPicture(List<double> x, List<double> y)
+    public static void GetSinglPicture(List<double> x, List<double> y, string XLabel = "Действительная ось", string YLabel = "Мнимая ось")
     {
         //ScottPlot.Version.ShouldBe(4, 1, 71);
         var plt = new ScottPlot.Plot();
@@ -17,8 +17,8 @@ public static class CreatorPicture
         plt.Legend.Orientation = Orientation.Horizontal;
         // customize the axis labels
         plt.Title("Современные компьютерные технологии");
-        plt.XLabel("Действительная ось");
-        plt.YLabel("Мнимая ось");
+        plt.XLabel(XLabel);
+        plt.YLabel(YLabel);
         // create a static function containing the string formatting logic
         static string CustomFormatter(double position)
         {
@@ -35,7 +35,8 @@ public static class CreatorPicture
         plt.Axes.Bottom.TickGenerator = myTickGenerator;
         plt.SavePng("D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\StartVector_f.png", 1200, 900);
     }
-    public static void GetBothPicture(List<double> x1, List<double> y1, List<double> x2, List<double> y2, bool toggle = true)
+    public static void GetBothPicture(List<double> x1, List<double> y1, List<double> x2, List<double> y2,
+        string XLabel = "Действительная ось", string YLabel = "Мнимая ось")
     {
         //ScottPlot.Version.ShouldBe(4, 1, 71);
         var plt = new ScottPlot.Plot();
@@ -50,8 +51,8 @@ public static class CreatorPicture
         plt.Legend.Orientation = Orientation.Horizontal;
         // customize the axis labels
         plt.Title("Современные компьютерные технологии");
-        plt.XLabel("Действительная ось");
-        plt.YLabel("Мнимая ось");
+        plt.XLabel(XLabel);
+        plt.YLabel(YLabel);
         // create a static function containing the string formatting logic
         static string CustomFormatter(double position)
         {
@@ -62,18 +63,10 @@ public static class CreatorPicture
             else
                 return $"-{-position}";
         }
-        if (toggle)
-        {
-            // create a custom tick generator using your custom label formatter
-            ScottPlot.TickGenerators.NumericAutomatic myTickGenerator = new() { LabelFormatter = CustomFormatter };
-            // tell an axis to use the custom tick generator
-            plt.Axes.Bottom.TickGenerator = myTickGenerator;
-        }
-        else
-        {
-            plt.Axes.SetLimitsY(-10, 10);
-
-        }
+        // create a custom tick generator using your custom label formatter
+        ScottPlot.TickGenerators.NumericAutomatic myTickGenerator = new() { LabelFormatter = CustomFormatter };
+        // tell an axis to use the custom tick generator
+        plt.Axes.Bottom.TickGenerator = myTickGenerator;
         plt.SavePng("D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.WEB\\wwwroot\\Picture\\BothVector_f.png", 1200, 900);
     }
 }
