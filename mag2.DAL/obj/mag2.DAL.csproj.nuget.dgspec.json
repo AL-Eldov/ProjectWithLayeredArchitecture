@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj",
         "projectName": "mag2.DAL",
         "projectPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\mag2.DAL.csproj",
-        "packagesPath": "C:\\Users\\AL_Eldnov\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Al_Eldnov\\.nuget\\packages\\",
         "outputPath": "D:\\LearningPath\\University\\2023-2024учеба\\1М курс\\2 семестр\\Современные компьютерные технологии\\mag2\\mag2.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\AL_Eldnov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Al_Eldnov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

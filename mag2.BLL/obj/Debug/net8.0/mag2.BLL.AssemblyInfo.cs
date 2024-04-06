@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mag2.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eceff22f0aefb115ead7780e1a4f64aca744f8f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80a974a4ccbd8ab9a85e05b525c533ca2e554e57")]
 [assembly: System.Reflection.AssemblyProductAttribute("mag2.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mag2.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
