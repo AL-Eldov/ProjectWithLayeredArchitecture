@@ -19,35 +19,35 @@ internal class Matrix_A_ActionService : IActionService<Matrix_A_DTO>
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Matrix_A, Matrix_A_DTO>()).CreateMapper();
         return mapper.Map<IEnumerable<Matrix_A>, List<Matrix_A_DTO>>(db.Matrix_A_Values.GetAll());
     }
-    public Matrix_A_DTO Get(int id)
+    public async Task<Matrix_A_DTO> Get(int id)
     {
-        var matrix_A = db.Matrix_A_Values.Get(id);
+        var matrix_A = await db.Matrix_A_Values.Get(id);
         return new Matrix_A_DTO { Id = matrix_A.Id, RealPart = matrix_A.RealPart, ImaginaryPart = matrix_A.ImaginaryPart, Column = matrix_A.Column, Row = matrix_A.Row };
     }
-    public void Create(Matrix_A_DTO item)
+    public async Task Create(Matrix_A_DTO item)
     {
-        db.Matrix_A_Values.Create(new Matrix_A { RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart, Column = item.Column, Row = item.Row });
-        db.Save();
+        await db.Matrix_A_Values.Create(new Matrix_A { RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart, Column = item.Column, Row = item.Row });
+        await db.Save();
     }
-    public void CreateWithoutSave(Matrix_A_DTO item)
+    public async Task CreateWithoutSave(Matrix_A_DTO item)
     {
-        db.Matrix_A_Values.Create(new Matrix_A { RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart, Column = item.Column, Row = item.Row });
+        await db.Matrix_A_Values.Create(new Matrix_A { RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart, Column = item.Column, Row = item.Row });
     }
-    public void Update(Matrix_A_DTO item)
+    public async Task Update(Matrix_A_DTO item)
     {
-        Matrix_A? observMatrix_A = db.Matrix_A_Values.GetAll().FirstOrDefault(x => x.Id == item.Id);
+        Matrix_A? observMatrix_A = await db.Matrix_A_Values.Get(item.Id);// GetAll().FirstOrDefault(x => x.Id == item.Id);
         if (observMatrix_A != null)
         {
             observMatrix_A.RealPart = item.RealPart;
             observMatrix_A.ImaginaryPart = item.ImaginaryPart;
             db.Matrix_A_Values.Update(observMatrix_A);
-            db.Save();
+            await db.Save();
         }
     }
-    public void Delete(int id)
+    public async Task Delete(int id)
     {
         db.Matrix_A_Values.Delete(id);
-        db.Save();
+        await db.Save();
     }
     public void DeleteAll()
     {

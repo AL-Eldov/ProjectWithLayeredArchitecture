@@ -18,21 +18,21 @@ public class Vector_c_ActionService : IActionService<Vector_c_DTO>
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_c, Vector_c_DTO>()).CreateMapper();
         return mapper.Map<IEnumerable<Vector_c>, List<Vector_c_DTO>>(db.Vector_c_Values.GetAll());
     }
-    public Vector_c_DTO Get(int id)
+    public async Task<Vector_c_DTO> Get(int id)
     {
-        var vector_c = db.Vector_c_Values.Get(id);
+        var vector_c = await db.Vector_c_Values.Get(id);
         return new Vector_c_DTO { Id = vector_c.Id, RealPart = vector_c.RealPart, ImaginaryPart = vector_c.ImaginaryPart };
     }
-    public void Create(Vector_c_DTO item)
+    public async Task Create(Vector_c_DTO item)
     {
-        db.Vector_c_Values.Create(new Vector_c { Id = item.Id, RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart });
-        db.Save();
+        await db.Vector_c_Values.Create(new Vector_c { Id = item.Id, RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart });
+        await db.Save();
     }
-    public void CreateWithoutSave(Vector_c_DTO item)
+    public async Task CreateWithoutSave(Vector_c_DTO item)
     {
-        db.Vector_c_Values.Create(new Vector_c { Id = item.Id, RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart });
+        await db.Vector_c_Values.Create(new Vector_c { Id = item.Id, RealPart = item.RealPart, ImaginaryPart = item.ImaginaryPart });
     }
-    public void Update(Vector_c_DTO item)
+    public async Task Update(Vector_c_DTO item)
     {
         Vector_c? observVector_c = db.Vector_c_Values.GetAll().FirstOrDefault(x => x.Id == item.Id);
         if (observVector_c != null)
@@ -40,13 +40,13 @@ public class Vector_c_ActionService : IActionService<Vector_c_DTO>
             observVector_c.RealPart = item.RealPart;
             observVector_c.ImaginaryPart = item.ImaginaryPart;
             db.Vector_c_Values.Update(observVector_c);
-            db.Save();
+            await db.Save();
         }
     }
-    public void Delete(int id)
+    public async Task Delete(int id)
     {
         db.Vector_c_Values.Delete(id);
-        db.Save();
+        await db.Save();
     }
     public void DeleteAll()
     {

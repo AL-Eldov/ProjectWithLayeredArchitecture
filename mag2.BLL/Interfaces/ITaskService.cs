@@ -11,5 +11,5 @@ public interface ITaskService
     IActionService<Vector_f_new_DTO> Vector_f_new_DTO_Values { get; }
     void Dispose();
     void DeleteAll();
-    void Save();
+    Task Save();
 }

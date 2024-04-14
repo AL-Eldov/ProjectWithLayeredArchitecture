@@ -62,9 +62,9 @@ public class EFUnitOfWork : IUnitOfWork
             return vector_f_new_Repository;
         }
     }
-    public void Save()
+    public async Task Save()
     {
-        db.SaveChanges();
+        await db.SaveChangesAsync();
     }
     private bool disposed = false;
     public virtual void Dispose(bool disposing)

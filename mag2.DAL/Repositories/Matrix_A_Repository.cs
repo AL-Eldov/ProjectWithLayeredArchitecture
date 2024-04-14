@@ -15,13 +15,14 @@ public class Matrix_A_Repository : IRepository<Matrix_A>
     {
         return db.Marix_A_Values;
     }
-    public Matrix_A Get(int id)
+    public async Task<Matrix_A> Get(int id)
     {
-        return db.Marix_A_Values.Find(id)!;
+        Matrix_A? tempMatrix_A = await db.Marix_A_Values.FindAsync(id);
+        return tempMatrix_A!;
     }
-    public void Create(Matrix_A matrix)
+    public async Task Create(Matrix_A matrix)
     {
-        db.Marix_A_Values.Add(matrix);
+        await db.Marix_A_Values.AddAsync(matrix);
     }
     public void Update(Matrix_A matrix)
     {

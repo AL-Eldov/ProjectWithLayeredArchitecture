@@ -16,13 +16,14 @@ public class Vector_f_Repository : IRepository<Vector_f>
     {
         return db.Vector_f_Values;
     }
-    public Vector_f Get(int id)
+    public async Task<Vector_f> Get(int id)
     {
-        return db.Vector_f_Values.Find(id)!;
+        Vector_f? tempVector_f = await db.Vector_f_Values.FindAsync(id);
+        return tempVector_f!;
     }
-    public void Create(Vector_f f)
+    public async Task Create(Vector_f f)
     {
-        db.Vector_f_Values.Add(f);
+        await db.Vector_f_Values.AddAsync(f);
     }
     public void Update(Vector_f f)
     {

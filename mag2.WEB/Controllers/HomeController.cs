@@ -21,7 +21,7 @@ public class HomeController : Controller
         taskService.DeleteAll();
         return View();
     }
-    public IActionResult GetfPage(int N, bool switcher)
+    public async Task<IActionResult> GetfPage(int N, bool switcher)
     {
         CounterMatrixA counterMatrixA = new CounterMatrixA(N);
         Complex[] MatrixA = counterMatrixA.MatrixA.ToArray();
@@ -33,7 +33,7 @@ public class HomeController : Controller
                 for (int k = 0; k < N; k++, i++)
                 {
                     tempMatrix_A_DTO = new Matrix_A_DTO { Id = i, Row = j + 1, Column = k + 1, RealPart = MatrixA[i].Real, ImaginaryPart = MatrixA[i].Imaginary };
-                    taskService.Matrix_A_DTO_Values.CreateWithoutSave(tempMatrix_A_DTO);
+                    await taskService.Matrix_A_DTO_Values.CreateWithoutSave(tempMatrix_A_DTO);
                 }
             }
         }
@@ -44,9 +44,9 @@ public class HomeController : Controller
         for (int i = 0; i < N; i++)
         {
             tempvector_f_DTO = new Vector_f_DTO { Id = i, RealPart = Vector_f[i].Real, ImaginaryPart = Vector_f[i].Imaginary };
-            taskService.Vector_f_DTO_Values.CreateWithoutSave(tempvector_f_DTO);
+            await taskService.Vector_f_DTO_Values.CreateWithoutSave(tempvector_f_DTO);
         }
-        taskService.Save();
+        await taskService.Save();
         IEnumerable<Vector_f_DTO> convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_f_DTO, Vector_f_ViewModel>()).CreateMapper();
         var viewVector_f = mapper.Map<IEnumerable<Vector_f_DTO>, List<Vector_f_ViewModel>>(convertVector_f_DTO);
@@ -65,7 +65,7 @@ public class HomeController : Controller
         return NotFound();
     }
     [HttpPost]
-    public IActionResult EditfPage(Vector_f_ViewModel vector_f)
+    public async Task<IActionResult> EditfPage(Vector_f_ViewModel vector_f)
     {
         IEnumerable<Vector_f_DTO> convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         Vector_f_DTO? vector_f_DTO = convertVector_f_DTO.FirstOrDefault(x => x.Id == vector_f.Id);
@@ -73,27 +73,27 @@ public class HomeController : Controller
         {
             vector_f_DTO.RealPart = vector_f.RealPart;
             vector_f_DTO.ImaginaryPart = vector_f.ImaginaryPart;
-            taskService.Vector_f_DTO_Values.Update(vector_f_DTO);
+            await taskService.Vector_f_DTO_Values.Update(vector_f_DTO);
         }
         convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_f_DTO, Vector_f_ViewModel>()).CreateMapper();
         var viewVector_f = mapper.Map<IEnumerable<Vector_f_DTO>, List<Vector_f_ViewModel>>(convertVector_f_DTO);
         return View("GetfPage", viewVector_f);
     }
-    public IActionResult DoImaginaryZero()
+    public async Task<IActionResult> DoImaginaryZero()
     {
         IEnumerable<Vector_f_DTO> convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         foreach (Vector_f_DTO vector_f in convertVector_f_DTO)
         {
             Vector_f_DTO? vector_f_DTO = new Vector_f_DTO { Id = vector_f.Id, RealPart = vector_f.RealPart, ImaginaryPart = 0.0 };
-            taskService.Vector_f_DTO_Values.Update(vector_f_DTO);
+            await taskService.Vector_f_DTO_Values.Update(vector_f_DTO);
         }
         convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_f_DTO, Vector_f_ViewModel>()).CreateMapper();
         var viewVector_f = mapper.Map<IEnumerable<Vector_f_DTO>, List<Vector_f_ViewModel>>(convertVector_f_DTO);
         return View("GetfPage", viewVector_f);
     }
-    public IActionResult GetZeroPercentPage(bool switcher)
+    public async Task<IActionResult> GetZeroPercentPage(bool switcher)
     {
         IEnumerable<Vector_f_DTO> vector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         IEnumerable<Matrix_A_DTO> matrix_A_DTO = taskService.Matrix_A_DTO_Values.GetAll();
@@ -103,9 +103,9 @@ public class HomeController : Controller
         Complex[] solution = InverseDiscreteFourierTransform.SystemSolve(A, f);
         for (int i = 0; i < solution.Length; i++)
         {
-            taskService.Vector_c_DTO_Values.CreateWithoutSave(new Vector_c_DTO { Id = i + 1, RealPart = solution[i].Real, ImaginaryPart = solution[i].Imaginary });
+            await taskService.Vector_c_DTO_Values.CreateWithoutSave(new Vector_c_DTO { Id = i + 1, RealPart = solution[i].Real, ImaginaryPart = solution[i].Imaginary });
         }
-        taskService.Save();
+        await taskService.Save();
 
         IEnumerable<Vector_f_DTO> convertVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Vector_f_DTO, Vector_f_ViewModel>()).CreateMapper();
@@ -127,25 +127,25 @@ public class HomeController : Controller
 
         return View(viewVector_c);
     }
-    public IActionResult ShowPicturePage(string percent, bool switcher)
+    public async Task<IActionResult> ShowPicturePage(string percent, bool switcher)
     {
         taskService.Vector_f_new_DTO_Values.DeleteAll();
         taskService.Vector_c_new_DTO_Values.DeleteAll();
-        taskService.Save();
+        await taskService.Save();
 
         Vector_c_DTO[] convertVector_c_DTO = taskService.Vector_c_DTO_Values.GetAll().OrderBy(x => x.GetAbsolute()).ToArray();
         int N = (int)Math.Round(convertVector_c_DTO.Length / 100.0 * double.Parse(percent));
         for (int i = 0; i < N; i++)
         {
             Vector_c_new_DTO? vector_c_new_DTO = new Vector_c_new_DTO { Id = convertVector_c_DTO[i].Id, RealPart = 0, ImaginaryPart = 0 };
-            taskService.Vector_c_new_DTO_Values.CreateWithoutSave(vector_c_new_DTO);
+            await taskService.Vector_c_new_DTO_Values.CreateWithoutSave(vector_c_new_DTO);
         }
         for (int i = N; i < convertVector_c_DTO.Length; i++)
         {
             Vector_c_new_DTO? vector_c_new_DTO = new Vector_c_new_DTO { Id = convertVector_c_DTO[i].Id, RealPart = convertVector_c_DTO[i].RealPart, ImaginaryPart = convertVector_c_DTO[i].ImaginaryPart };
-            taskService.Vector_c_new_DTO_Values.CreateWithoutSave(vector_c_new_DTO);
+            await taskService.Vector_c_new_DTO_Values.CreateWithoutSave(vector_c_new_DTO);
         }
-        taskService.Save();
+        await taskService.Save();
 
         IEnumerable<Vector_c_new_DTO> vector_c_new = taskService.Vector_c_new_DTO_Values.GetAll();
         IEnumerable<Matrix_A_DTO> matrix_A_DTO = taskService.Matrix_A_DTO_Values.GetAll();
@@ -155,9 +155,9 @@ public class HomeController : Controller
         for (int i = 0; i < f_new.Length; i++)
         {
             Vector_f_new_DTO? vector_f_new_DTO = new Vector_f_new_DTO { RealPart = f_new[i].Real, ImaginaryPart = f_new[i].Imaginary };
-            taskService.Vector_f_new_DTO_Values.CreateWithoutSave(vector_f_new_DTO);
+            await taskService.Vector_f_new_DTO_Values.CreateWithoutSave(vector_f_new_DTO);
         }
-        taskService.Save();
+        await taskService.Save();
 
         IEnumerable<Vector_f_DTO> tempVector_f_DTO = taskService.Vector_f_DTO_Values.GetAll();
         IEnumerable<Vector_f_new_DTO> tempVector_f_new_DTO = taskService.Vector_f_new_DTO_Values.GetAll();
@@ -176,7 +176,6 @@ public class HomeController : Controller
             Vector_x, tempVector_f_new_DTO.Select(x => x.RealPart).ToList(), "Равномерно распределенный набор иксов", "Значения вектора f");
         }
         ViewData["Switcher"] = switcher;
-
 
         return View();
     }

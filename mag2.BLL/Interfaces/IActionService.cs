@@ -3,10 +3,10 @@
 public interface IActionService<T> where T : class
 {
     IEnumerable<T> GetAll();
-    T Get(int id);
-    void Create(T item);
-    void CreateWithoutSave(T item);
-    void Update(T item);
-    void Delete(int id);
+    Task<T> Get(int id);
+    Task Create(T item);
+    Task CreateWithoutSave(T item);
+    Task Update(T item);
+    Task Delete(int id);
     void DeleteAll();
 }

@@ -1,6 +1,5 @@
 ﻿using mag2.BLL.DTO;
 using mag2.BLL.Interfaces;
-using mag2.DAL.Entities;
 using mag2.DAL.Interfaces;
 
 namespace mag2.BLL.Services;
@@ -92,9 +91,9 @@ public class TaskService : ITaskService
         db.Save();*/
         db.DeleteDB();
     }
-    public void Save()
+    public async Task Save()
     {
-        db.Save();
+       await db.Save();
     }
     public void Dispose()
     {

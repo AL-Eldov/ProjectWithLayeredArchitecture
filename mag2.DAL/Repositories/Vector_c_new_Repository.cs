@@ -20,13 +20,14 @@ public class Vector_c_new_Repository : IRepository<Vector_c_new>
     {
         return db.Vector_c_new_Values;
     }
-    public Vector_c_new Get(int id)
+    public async Task<Vector_c_new> Get(int id)
     {
-        return db.Vector_c_new_Values.Find(id)!;
+        Vector_c_new? tempVector_c_new = await db.Vector_c_new_Values.FindAsync(id);
+        return tempVector_c_new!;
     }
-    public void Create(Vector_c_new c)
+    public async Task Create(Vector_c_new c)
     {
-        db.Vector_c_new_Values.Add(c);
+        await db.Vector_c_new_Values.AddAsync(c);
     }
     public void Update(Vector_c_new c)
     {

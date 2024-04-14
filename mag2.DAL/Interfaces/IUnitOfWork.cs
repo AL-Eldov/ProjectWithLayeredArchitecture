@@ -9,6 +9,6 @@ public interface IUnitOfWork : IDisposable
     IRepository<Matrix_A> Matrix_A_Values { get; }
     IRepository<Vector_c_new> Vector_c_new_Values { get; }
     IRepository<Vector_f_new> Vector_f_new_Values { get; }
-    void Save();
+    Task Save();
     void DeleteDB();
 }
